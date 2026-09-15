@@ -1,8 +1,18 @@
 🍰 Soumya's Creations
 
-A warm, editorial home-bakery website designed to make ordering desserts feel personal, calm, and memorable.
+<p align="center">
+  <strong>A warm, editorial home-bakery experience made for thoughtful celebrations.</strong>
+</p>
 
-Built for a Kolkata-based home bakery with a focus on handcrafted cakes, brownies, cupcakes, cookies, and direct WhatsApp ordering.
+<p align="center">
+  <a href="https://soumyas-creation-kolkata.vercel.app/" target="_blank">
+    <strong>✨ View the Live Website →</strong>
+  </a>
+</p>
+
+<p align="center">
+  <sub>Handcrafted cakes • Small-batch bakes • Kolkata</sub>
+</p>
 
 ✨ Preview
 
@@ -133,6 +143,14 @@ ordersection.png
 Soumya's Creations
 
 A small-batch home bakery in Kolkata focused on handcrafted desserts, thoughtful preparation, and personal celebrations.
+
+🌐 Live
+
+<p align="center">
+  <a href="https://soumyas-creation-kolkata.vercel.app/">
+    <strong>soumyas-creation-kolkata.vercel.app ↗</strong>
+  </a>
+</p>
 
 📌 Status
 
