@@ -1,313 +1,139 @@
 🍰 Soumya's Creations
 
-<p align="center">
-  <strong>A warm, editorial home-bakery experience crafted for celebrations, quiet moments, and everything sweet in between.</strong>
-</p>
+A warm, editorial home-bakery website designed to make ordering desserts feel personal, calm, and memorable.
 
-<p align="center">
-  A premium bakery storefront built with Next.js, React, TypeScript, Tailwind CSS, and Motion.
-</p>
+Built for a Kolkata-based home bakery with a focus on handcrafted cakes, brownies, cupcakes, cookies, and direct WhatsApp ordering.
 
-<p align="center">
-  <a href="#-experience">Experience</a> ·
-  <a href="#-screenshots">Screenshots</a> ·
-  <a href="#-features">Features</a> ·
-  <a href="#-tech-stack">Tech Stack</a> ·
-  <a href="#-getting-started">Getting Started</a>
-</p>
+✨ Preview
 
-✦ The idea
+Hero
 
-Soumya's Creations is designed to feel less like a conventional ecommerce template and more like a small, intimate bakery brand brought to life on the web.
+<img src="public/screenshots/hero1.png" alt="Soumya's Creations hero" width="100%" />
 
-The visual direction combines:
+<img src="public/screenshots/hero2.png" alt="Soumya's Creations hero variation" width="100%" />
 
-warm ivory and oat tones
+<img src="public/screenshots/hero3.png" alt="Soumya's Creations hero detail" width="100%" />
 
-editorial serif typography
+Cakes & Ordering
 
-restrained terracotta accents
+<img src="public/screenshots/thecakesorder.png" alt="Cake ordering experience" width="100%" />
 
-tactile product cards
+How We Bake
 
-subtle motion and smooth scrolling
+<img src="public/screenshots/howwebake.png" alt="How we bake" width="100%" />
 
-a calm, premium rhythm rather than flashy effects
+Ordering Information
 
-The goal is simple:
+<img src="public/screenshots/ordersection.png" alt="Ordering information" width="100%" />
 
-Make the website feel like the bakery itself — warm, personal, handcrafted, and intentional.
+🌿 Design Direction
 
-✨ Experience
+The visual language is intentionally soft and editorial rather than overly polished or “SaaS-like”.
 
-The homepage is structured as a visual journey:
+Warm ivory, oat, espresso, blush, and terracotta tones
 
-HOME
-  ↓
-EXPLORE THE RANGE
-  ↓
-BAKEHOUSE MENU
-  ↓
-THE STORY
-  ↓
-HOW ORDERING WORKS
-  ↓
-MOMENTS
-  ↓
-CONTACT
+Serif-led typography with restrained sans-serif supporting text
 
-Motion is deliberately used to support the experience rather than compete with it. Elements enter softly, product imagery responds subtly to interaction, and the main scroll experience uses a restrained pinned feel to create continuity between sections.
+Generous whitespace and rounded image framing
 
-📸 Screenshots
+Premium food-editorial aesthetic
 
-Home
+Subtle motion instead of distracting animation
 
+Mobile-first product browsing and ordering flow
 
+The website should feel like an invitation to share something sweet, not just another online store.
 
-The opening experience introduces the bakery through a warm editorial hero, signature product imagery, and direct ordering actions.
+🛍️ Core Experience
 
-Hero — alternate view
+Browse
 
+Explore cakes, brownies, cupcakes, and cookies through a visually curated product menu.
 
+Discover
 
-A closer look at the visual language, typography, spacing, and hero composition.
+Filter products by category, search flavours and ingredients, and find eggless options.
 
-Hero — responsive / secondary view
+Product Details
 
+Open a product to view its details, available sizes, ingredients, and ordering options.
 
+Cart
 
-The same visual system carried through another viewport/state.
+Add products to the cart, adjust quantities, and review the order before checkout.
 
-Cakes & Orders
+Order
 
+Move from the website into a simple ordering flow designed around a home-bakery workflow and WhatsApp communication.
 
+🎞️ Motion Philosophy
 
-The product journey is designed around discovery first, then a clear path toward ordering.
+The site uses motion as part of the brand experience rather than decoration.
 
-How we bake
+The direction is:
 
+slow where the user looks, fast where the user acts.
 
+Subtle scroll movement, image reveals, product-card interactions, cart transitions, and restrained micro-interactions are used to make the experience feel tactile and premium.
 
-Editorial storytelling explains the handcrafted process and gives the bakery a human identity beyond the products themselves.
+🧱 Tech Stack
 
-Ordering
-
-
-
-The ordering experience keeps practical information clear while preserving the same calm visual language.
-
-🧁 Features
-
-Shopping
-
-Browse cakes, cupcakes, brownies, and cookies
-
-Filter products by category
-
-Search by product, flavour, tags, or highlighted ingredients
-
-Filter for eggless options
-
-Select product sizes
-
-Quick-add products to cart
-
-Open detailed product information
-
-Ordering
-
-Cart drawer
-
-Product detail modal
-
-Checkout modal
-
-WhatsApp ordering integration
-
-Advance-notice messaging for fresh baking
-
-Custom bake and dietary inquiry paths
-
-Experience
-
-Responsive mobile-first layout
-
-Smooth scrolling
-
-Scroll-linked motion
-
-Soft product-card interactions
-
-Reduced-motion support
-
-Editorial section transitions
-
-Premium bakery-focused visual system
-
-🛠 Tech Stack
-
-Layer
-
-Technology
-
-Framework
-
-Next.js 15
-
-Language
-
-TypeScript
-
-UI
+Next.js
 
 React
 
-Styling
+TypeScript
 
 Tailwind CSS
 
-Animation
-
-Motion for React
-
-Smooth scrolling
+Motion
 
 Lenis
 
-Icons
-
-Lucide React
-
-Images
-
-Next.js Image
-
-Commerce state
-
-React Context
+Lucide Icons
 
 📁 Project Structure
 
-Soumyas-Creations/
-├── app/
-│   ├── page.tsx
-│   └── ...
-├── components/
-│   ├── Navbar.tsx
-│   ├── Hero.tsx
-│   ├── CategorySection.tsx
-│   ├── ProductGrid.tsx
-│   ├── ProductCard.tsx
-│   ├── ProductDetailModal.tsx
-│   ├── CartDrawer.tsx
-│   ├── CheckoutModal.tsx
-│   ├── StorySection.tsx
-│   ├── OrderingInfoSection.tsx
-│   ├── InstagramSection.tsx
-│   ├── ContactSection.tsx
-│   ├── Footer.tsx
-│   └── SmoothScroll.tsx
-├── config/
-├── context/
-├── data/
-├── hooks/
-├── lib/
-├── public/
-│   ├── images/
-│   └── screenshots/
-│       ├── hero1.png
-│       ├── hero2.png
-│       ├── hero3.png
-│       ├── thecakesorder.png
-│       ├── howwebake.png
-│       └── ordersection.png
-├── services/
-├── types/
-└── utils/
+app/
+components/
+config/
+context/
+data/
+hooks/
+lib/
+public/
+services/
+types/
+utils/
 
-🚀 Getting Started
-
-1. Clone the repository
-
-git clone https://github.com/MaximuxR93/Soumyas-Creations.git
-cd Soumyas-Creations
-
-2. Install dependencies
+🚀 Run Locally
 
 npm install
-
-3. Start the development server
-
 npm run dev
 
-Then open:
+Open:
 
 http://localhost:3000
 
-4. Build for production
+📸 Screenshot Assets
 
-npm run build
+The images above are stored in:
 
-5. Start production
+public/screenshots/
 
-npm start
+hero1.png
+hero2.png
+hero3.png
+thecakesorder.png
+howwebake.png
+ordersection.png
 
-🎨 Design Direction
+❤️ Built For
 
-The interface intentionally avoids the usual patterns associated with modern template-heavy ecommerce sites.
+Soumya's Creations
 
-Instead, the design follows an editorial bakery aesthetic:
+A small-batch home bakery in Kolkata focused on handcrafted desserts, thoughtful preparation, and personal celebrations.
 
-warm neutrals · generous whitespace · serif headlines · tactile cards · subtle terracotta accents · restrained motion
+📌 Status
 
-The animation philosophy is equally intentional:
-
-Slow where the user looks. Fast where the user acts. Nearly invisible everywhere else.
-
-That means motion is used for hierarchy, continuity, and feedback — not decoration for its own sake.
-
-📱 Responsive Design
-
-The experience is designed to adapt across:
-
-Desktop
-
-Laptop
-
-Tablet
-
-Mobile
-
-On smaller screens, the layout prioritizes readability, thumb-friendly controls, product discovery, and straightforward ordering over desktop-style visual complexity.
-
-🧑‍🍳 Brand Story
-
-Soumya's Creations is presented as a home bakery built around small-batch preparation, familiar flavours, and personal attention.
-
-The website therefore treats storytelling as part of the product: the brand, baking process, products, and ordering journey are intentionally connected instead of feeling like separate pages.
-
-🔮 Roadmap
-
-Potential next steps for the project:
-
-Replace remaining remote imagery with optimized local assets
-
-Add production-grade image optimization and responsive image sets
-
-Add analytics and conversion tracking
-
-Add customer reviews / testimonials
-
-Add order-status and inquiry workflows
-
-Add SEO metadata and structured bakery/product data
-
-Add production deployment configuration
-
-📄 License
-
-This project is intended for the Soumya's Creations bakery website and brand experience.
-
-<p align="center">
-  <strong>Made with butter, patience, and a little extra love. 🍰</strong>
-</p>
+Active development — refining the visual system, motion design, product experience, and ordering flow before deployment.
