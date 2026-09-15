@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import { CartProvider, useCart } from '@/context/CartContext';
+import { SmoothScroll } from '@/components/SmoothScroll';
+
 import { Navbar } from '@/components/Navbar';
-import { Hero } from '@/components/Hero';
+import {Hero} from '@/components/Hero';
+
 import { CategorySection } from '@/components/CategorySection';
 import { ProductGrid } from '@/components/ProductGrid';
 import { StorySection } from '@/components/StorySection';
@@ -11,61 +15,122 @@ import { OrderingInfoSection } from '@/components/OrderingInfoSection';
 import { InstagramSection } from '@/components/InstagramSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+
 import { CartDrawer } from '@/components/CartDrawer';
 import { CheckoutModal } from '@/components/CheckoutModal';
 import { ProductDetailModal } from '@/components/ProductDetailModal';
+
 import { ProductCategory } from '@/types/bakery';
 
 function BakeryApp() {
-  const [activeCategory, setActiveCategory] = useState<'All' | ProductCategory>('All');
-  const { selectedProductForDetail, closeProductDetail } = useCart();
+  const [activeCategory, setActiveCategory] = useState<
+    'All' | ProductCategory
+  >('All');
 
-  const handleSelectCategory = (cat: 'All' | ProductCategory) => {
-    setActiveCategory(cat);
+  const {
+    selectedProductForDetail,
+    closeProductDetail,
+  } = useCart();
+
+  const handleSelectCategory = (
+    category: 'All' | ProductCategory
+  ) => {
+    setActiveCategory(category);
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-ivory text-espresso selection:bg-blush selection:text-espresso">
-      {/* Navigation Header */}
+    <div className="min-h-screen bg-ivory text-espresso selection:bg-blush selection:text-espresso">
+
       <Navbar />
 
-      {/* Main Content Sections */}
-      <main className="flex-grow">
-        {/* Editorial Bakery Hero */}
-        <Hero />
+      <main>
 
-        {/* Featured Category Section */}
-        <CategorySection onSelectCategory={handleSelectCategory} />
+        {/* =====================================================
+            HOME
+            Soft pinned-scroll Hero.
+        ====================================================== */}
 
-        {/* Main Product & Cake Menu */}
-        <ProductGrid
-          activeCategory={activeCategory}
-          onSelectCategory={handleSelectCategory}
-        />
+        <section
+          id="home"
+          className="relative h-[120vh]"
+        >
+          <div className="sticky top-0 h-screen overflow-hidden">
+            <Hero />
+          </div>
+        </section>
 
-        {/* Editorial Story Section */}
+        {/* =====================================================
+            CATEGORIES
+        ====================================================== */}
+
+        <section
+          id="categories-wrap"
+          className="relative z-10"
+        >
+          <CategorySection
+            onSelectCategory={handleSelectCategory}
+          />
+        </section>
+
+        {/* =====================================================
+            MENU
+        ====================================================== */}
+
+        <section
+          id="menu"
+          className="relative z-10"
+        >
+          <ProductGrid
+            activeCategory={activeCategory}
+            onSelectCategory={handleSelectCategory}
+          />
+        </section>
+
+        {/* =====================================================
+            STORY
+        ====================================================== */}
+
         <StorySection />
 
-        {/* 3-Step Ordering Information */}
+        {/* =====================================================
+            ORDERING
+        ====================================================== */}
+
         <OrderingInfoSection />
 
-        {/* Instagram / Social Visuals */}
+        {/* =====================================================
+            MOMENTS
+        ====================================================== */}
+
         <InstagramSection />
 
-        {/* Contact & Custom Bake Inquiries */}
+        {/* =====================================================
+            CONTACT
+        ====================================================== */}
+
         <ContactSection />
+
       </main>
 
-      {/* Editorial Footer */}
+      {/* =======================================================
+          FOOTER
+      ======================================================== */}
+
       <Footer />
 
-      {/* Interactive Overlays & Drawers */}
+      {/* =======================================================
+          COMMERCE OVERLAYS
+      ======================================================== */}
+
       <CartDrawer />
+
       <CheckoutModal />
+
       <ProductDetailModal
         product={selectedProductForDetail}
         onClose={closeProductDetail}
       />
+
     </div>
   );
 }
@@ -73,7 +138,9 @@ function BakeryApp() {
 export default function Page() {
   return (
     <CartProvider>
-      <BakeryApp />
+      <SmoothScroll>
+        <BakeryApp />
+      </SmoothScroll>
     </CartProvider>
   );
 }
